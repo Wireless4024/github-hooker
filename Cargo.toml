@@ -1,0 +1,27 @@
+[package]
+name = "github-hooker"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+axum = { version = "0.5", features = ["serde_json"] }
+dotenv = "0.15"
+anyhow = "1.0"
+log = { version = "0.4", features = ["release_max_level_info"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+tokio = { version = "1.18", features = ["full"] }
+hyper = { version = "0.14", features = ["client"] }
+tower = "0.4"
+tower-http = { version = "0.2", features = ["fs", "cors"] }
+tracing = "0.1"
+tracing-subscriber = "0.3"
+regex = "1.5"
+sha1 = "0.10"
+wildmatch = "2.1"
+
+[profile.release]
+opt-level = 3
+lto = "thin"

@@ -1,0 +1,6 @@
+{
+  "branch": "m*",
+  "secret": "secret",
+  "repo": "test_project",
+  "url": "http://localhost:3333"
+}
